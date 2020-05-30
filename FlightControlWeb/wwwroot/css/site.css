@@ -98,3 +98,11 @@ body {
   min-width: 600px;
   border: 2px solid #309fff;
 }
+
+.flight-detail {
+  margin-top: 1px;
+}
+
+.details {
+  text-align: left;
+}

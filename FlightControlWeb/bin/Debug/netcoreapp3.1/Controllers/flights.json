@@ -1,6 +1,6 @@
 ﻿[
   {
-    "flight_id": "1",
+    "flight_id": "SWS_121",
     "longitude": 33.244,
     "latitude": 31.12,
     "passengers": 216,
@@ -9,7 +9,7 @@
     "is_external": false
   },
   {
-    "flight_id": "2",
+    "flight_id": "SWS_122",
     "longitude": 33.244,
     "latitude": 31.12,
     "passengers": 216,
@@ -18,7 +18,7 @@
     "is_external": false
   },
   {
-    "flight_id": "3",
+    "flight_id": "SWS_127",
     "longitude": 33.244,
     "latitude": 31.12,
     "passengers": 216,
@@ -27,7 +27,7 @@
     "is_external": false
   },
   {
-    "flight_id": "4",
+    "flight_id": "SWS_128",
     "longitude": 33.244,
     "latitude": 31.12,
     "passengers": 216,
@@ -36,7 +36,7 @@
     "is_external": false
   },
   {
-    "flight_id": "5",
+    "flight_id": "SWS_123",
     "longitude": 33.244,
     "latitude": 31.12,
     "passengers": 216,
