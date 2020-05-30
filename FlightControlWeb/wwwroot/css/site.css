@@ -105,4 +105,20 @@ body {
 
 .details {
   text-align: left;
+  
+}
+
+.flight-id:hover {
+  cursor: pointer;
+  color: #2cda00;
+}
+
+#flight-list {
+  max-height: 600px;
+  overflow-y: scroll;
+  min-height: 600px;
+}
+
+.selected {
+  color: #2cda00;
 }
