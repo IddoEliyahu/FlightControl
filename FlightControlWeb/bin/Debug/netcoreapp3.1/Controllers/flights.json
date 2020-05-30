@@ -1,0 +1,65 @@
+﻿[
+  {
+    "flight_id": "1",
+    "longitude": 33.244,
+    "latitude": 31.12,
+    "passengers": 216,
+    "company_name": "SwissAir",
+    "date_time": "2020-12-26T23:56:21Z",
+    "is_external": false
+  },
+  {
+    "flight_id": "2",
+    "longitude": 33.244,
+    "latitude": 31.12,
+    "passengers": 216,
+    "company_name": "SwissAir",
+    "date_time": "2020-12-26T23:56:21Z",
+    "is_external": false
+  },
+  {
+    "flight_id": "3",
+    "longitude": 33.244,
+    "latitude": 31.12,
+    "passengers": 216,
+    "company_name": "SwissAir",
+    "date_time": "2020-12-26T23:56:21Z",
+    "is_external": false
+  },
+  {
+    "flight_id": "4",
+    "longitude": 33.244,
+    "latitude": 31.12,
+    "passengers": 216,
+    "company_name": "SwissAir",
+    "date_time": "2020-12-26T23:56:21Z",
+    "is_external": false
+  },
+  {
+    "flight_id": "5",
+    "longitude": 33.244,
+    "latitude": 31.12,
+    "passengers": 216,
+    "company_name": "SwissAir",
+    "date_time": "2020-12-26T23:56:21Z",
+    "is_external": false
+  },
+  {
+    "flight_id": "6",
+    "longitude": 33.244,
+    "latitude": 31.12,
+    "passengers": 216,
+    "company_name": "SwissAir",
+    "date_time": "2020-12-26T23:56:21Z",
+    "is_external": false
+  },
+  {
+    "flight_id": "7",
+    "longitude": 33.244,
+    "latitude": 31.12,
+    "passengers": 216,
+    "company_name": "SwissAir",
+    "date_time": "2020-12-26T23:56:21Z",
+    "is_external": false
+  }
+]
