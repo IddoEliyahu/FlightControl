@@ -6,7 +6,7 @@ using Newtonsoft.Json;
 
 namespace FlightControlWeb.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/Flights/")]
     [ApiController]
     public class FlightsController : ControllerBase
     {
@@ -14,16 +14,16 @@ namespace FlightControlWeb.Controllers
 
         // GET: api/Flights
         [HttpGet]
-        public Flight[] Get(DateTime? relative_to, bool? sync_all)
+        public Flight[] Get()
         {
             return this.Flights;
         }
 
         // GET: api/Flights/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "GetFlight")]
         public string Get(string id)
         {
-            return Array.Find(Flights, Flight => Flight.flight_id == id).ToJson();
+            return Array.Find(Flights, flight => flight.flight_id == id).ToJson();
         }
 
         // POST: api/Flights

@@ -98,3 +98,27 @@ body {
   min-width: 600px;
   border: 2px solid #309fff;
 }
+
+.flight-detail {
+  margin-top: 1px;
+}
+
+.details {
+  text-align: left;
+  
+}
+
+.flight-id:hover {
+  cursor: pointer;
+  color: #2cda00;
+}
+
+#flight-list {
+  max-height: 600px;
+  overflow-y: scroll;
+  min-height: 600px;
+}
+
+.selected {
+  color: #2cda00;
+}

@@ -143,5 +143,6 @@ C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\bin\Debug\netcoreapp3.
 C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.InMemory.dll
 C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\bin\Debug\netcoreapp3.1\Controllers\flight-plans.json
 C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\obj\Debug\netcoreapp3.1\FlightControlWeb.csproj.CoreCompileInputs.cache
 C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\obj\Debug\netcoreapp3.1\FlightControlWeb.MvcApplicationPartsAssemblyInfo.cache

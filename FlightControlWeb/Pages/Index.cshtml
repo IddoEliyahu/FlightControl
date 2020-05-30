@@ -9,19 +9,19 @@
     <div class="row">
         <div class="col-8 map" id="map"></div>
         <div class="col-4 flight-list">
-            <ul class="list-group">
-                <li class="list-group-item">
-                    DEL-564
-                </li>
-                <li class="list-group-item">
-                    UAL-561
-                </li>
-                <li class="list-group-item">
-                    DEL-562
-                </li>
-                <li class="list-group-item">
-                    DEL-566
-                </li>
+            <ul class="list-group" id="flight-list">
+                @* <li class="list-group-item"> *@
+                @*     DEL-564 *@
+                @* </li> *@
+                @* <li class="list-group-item"> *@
+                @*     UAL-561 *@
+                @* </li> *@
+                @* <li class="list-group-item"> *@
+                @*     DEL-562 *@
+                @* </li> *@
+                @* <li class="list-group-item"> *@
+                @*     DEL-566 *@
+                @* </li> *@
             </ul>
         </div>
     </div>
@@ -71,17 +71,4 @@
     }
 </style>
 
-<script>
-    var map;
-
-    function initMap() {
-        map = new google.maps.Map(document.getElementById('map'),
-            {
-                center: { lat: 31, lng: 34 },
-                zoom: 8
-            });
-    }
-
-</script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBztoECaWRdWEGiS5akC4r3iasQexXjCGY&callback=initMap"></script>
-@* AIzaSyCpWcng3ZBGgJF6W9OGjSn6CJqMskTS4B0 *@
