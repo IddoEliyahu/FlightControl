@@ -4,7 +4,7 @@ using FlightControlWeb.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace FlightControlWeb.Controllers
+namespace FlightControl.Controllers
 {
     [Route("api/Flights/")]
     [ApiController]
