@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using FlightControlWeb.Models;
+using FlightControl.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 

@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Iddo\\source\\repos\\FlightControl\\FlightControlWeb\\FlightControlWeb.csproj": {}
+    "C:\\Users\\User\\Source\\Repos\\IddoEliyahu\\FlightControl\\FlightControlWeb\\FlightControlWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Iddo\\source\\repos\\FlightControl\\FlightControlWeb\\FlightControlWeb.csproj": {
+    "C:\\Users\\User\\Source\\Repos\\IddoEliyahu\\FlightControl\\FlightControlWeb\\FlightControlWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Iddo\\source\\repos\\FlightControl\\FlightControlWeb\\FlightControlWeb.csproj",
+        "projectUniqueName": "C:\\Users\\User\\Source\\Repos\\IddoEliyahu\\FlightControl\\FlightControlWeb\\FlightControlWeb.csproj",
         "projectName": "FlightControlWeb",
-        "projectPath": "C:\\Users\\Iddo\\source\\repos\\FlightControl\\FlightControlWeb\\FlightControlWeb.csproj",
-        "packagesPath": "C:\\Users\\Iddo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Iddo\\source\\repos\\FlightControl\\FlightControlWeb\\obj\\",
+        "projectPath": "C:\\Users\\User\\Source\\Repos\\IddoEliyahu\\FlightControl\\FlightControlWeb\\FlightControlWeb.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Source\\Repos\\IddoEliyahu\\FlightControl\\FlightControlWeb\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Iddo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,7 +98,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

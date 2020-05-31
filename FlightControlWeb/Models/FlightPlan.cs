@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace FlightControlWeb.Models
+namespace FlightControl.Models
 {
     public class FlightPlan
     {
