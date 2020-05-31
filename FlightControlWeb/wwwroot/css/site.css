@@ -120,5 +120,9 @@ body {
 }
 
 .selected {
-  color: #2cda00;
+  color: #ffc107;
+}
+
+.not-selected{
+  color: #000000;
 }

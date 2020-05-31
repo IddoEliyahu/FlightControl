@@ -4,7 +4,7 @@
 // Write your Javascript code.
 
 let expandedFlightsMap = new Map();
-let selectedFlight = {id: 0, selector: null};
+let selectedFlightId = "";
 
 var map;
 
@@ -36,32 +36,36 @@ setInterval(() => {
 
 function toggleFlight(element) {
     let flightId = element.innerText ? element.innerText : element;
-        
+
     let flightDetailsSelector = $("#" + flightId + " .details");
-    
+
     // TODO: fix conditions to toggle only on the last one selected if it's expanded
     if (expandedFlightsMap.get(flightId)) {
         flightDetailsSelector.hide();
         expandedFlightsMap.set(flightId.toString(), false);
-        $("#" + selectedFlight).toggleClass("selected");
-        selectedFlight = null;
+        $("#" + selectedFlightId).toggleClass("selected");
+        selectedFlightId = null;
         $("#" + flightId).toggleClass("selected");
+
     } else {
+        expandedFlightsMap.forEach(flightFlag => {
+            $("#" + selectedFlightId).toggleClass("not-selected");
+        });
         $("#" + flightId).toggleClass("selected");
-        selectedFlight = flightId;
+        selectedFlightId = flightId;
         flightDetailsSelector.show();
         expandedFlightsMap.set(flightId.toString(), true);
     }
 }
 
 function updateFlightsListHtml(flight) {
-    return `<li id=${flight.flight_id} class="list-group-item ${selectedFlight === flight.flight_id ? 'selected' : ''}" >
+    return `<li id=${flight.flight_id} class="list-group-item ${selectedFlightId === flight.flight_id ? 'selected' : ''}" >
                     <div onclick='toggleFlight(this)' class='flight-id'>
                         ${flight.flight_id}
                     </div>
                     <div style="display: ${expandedFlightsMap.get(flight.flight_id) ? 'block' : 'none'}"
                          class="${flight.is_external ? 'external-flight' : 'internal-flight '} details
-                                ${selectedFlight.id === flight.flight_id ? 'selected' : ''}">
+                                ${selectedFlightId === flight.flight_id ? 'selected' : ''}">
                         <div class="flight-detail"> Passengers: ${flight.passengers} </div>
                         <div> Company Name: ${flight.company_name} </div>
                         <div> Location: (${flight.longitude}, ${flight.latitude} )</div>
@@ -88,7 +92,21 @@ function addFlightToMap(flight) {
         flightsMarkers.set(flight.flight_id, marker);
     } else {
         flightsMarkers.get(flight.flight_id).setPosition({
-            position: getPosition(flight.latitude, flight.longitude)
-        })
+                position: getPosition(flight.latitude, flight.longitude)
+            }
+        )
     }
 }
+
+function initDetails() {
+
+}
+
+function resetDetails() {
+    
+}
+
+function updateDetails() {
+
+}
+
