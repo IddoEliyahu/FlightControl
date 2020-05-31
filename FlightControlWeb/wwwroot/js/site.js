@@ -29,7 +29,7 @@ setInterval(() => {
             flightListHtml += updateFlightsListHtml(flight);
             addFlightToMap(flight);
         });
-
+        
         $("#flight-list").html(flightListHtml);
     });
 }, 1000);
@@ -99,7 +99,7 @@ function addFlightToMap(flight) {
 }
 
 function initDetails() {
-
+    
 }
 
 function resetDetails() {

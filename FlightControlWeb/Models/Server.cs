@@ -16,7 +16,5 @@ namespace FlightControl
         [Required]
 
         public string ServerURL { get; set; }
-
-
     }
 }
