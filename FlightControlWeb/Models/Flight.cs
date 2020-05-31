@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace FlightControlWeb.Models
+namespace FlightControl.Models
 {
     
     public class Flight
@@ -14,6 +14,9 @@ namespace FlightControlWeb.Models
         public DateTime date_time { get; set; }
 
         public bool isExternal { get; set; }
+
+
+
 
         public int passengers { get; set; }
 

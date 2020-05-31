@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using FlightControlWeb.Models;
+using FlightControl.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace FlightControlWeb.Controllers
+namespace FlightControl.Controllers
 {
     [Route("api/Flights/")]
     [ApiController]
