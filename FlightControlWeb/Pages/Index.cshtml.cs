@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace FlightControl.Pages
+namespace FlightControlWeb.Pages
 {
     public class IndexModel : PageModel
     {

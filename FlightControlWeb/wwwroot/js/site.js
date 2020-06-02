@@ -6,7 +6,9 @@
 let expandedFlightsMap = new Map();
 let selectedFlightId = "";
 
+
 var map;
+var dragBox;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'),
@@ -29,7 +31,7 @@ setInterval(() => {
             flightListHtml += updateFlightsListHtml(flight);
             addFlightToMap(flight);
         });
-        
+
         $("#flight-list").html(flightListHtml);
     });
 }, 1000);
@@ -41,20 +43,20 @@ function toggleFlight(element) {
 
     // TODO: fix conditions to toggle only on the last one selected if it's expanded
     if (expandedFlightsMap.get(flightId)) {
+        // Shrink
         flightDetailsSelector.hide();
         expandedFlightsMap.set(flightId.toString(), false);
         $("#" + selectedFlightId).toggleClass("selected");
-        selectedFlightId = null;
         $("#" + flightId).toggleClass("selected");
-
+        selectedFlightId = null;
+        resetDetails();
     } else {
-        expandedFlightsMap.forEach(flightFlag => {
-            $("#" + selectedFlightId).toggleClass("not-selected");
-        });
+        // Expand
         $("#" + flightId).toggleClass("selected");
         selectedFlightId = flightId;
         flightDetailsSelector.show();
         expandedFlightsMap.set(flightId.toString(), true);
+        updateDetails();
     }
 }
 
@@ -99,14 +101,84 @@ function addFlightToMap(flight) {
 }
 
 function initDetails() {
-    
+
 }
 
 function resetDetails() {
-    
+    return `<tr>
+    <td>
+    Passengers: 
+    </td>
+    <td>
+    Takeoff Location: 
+    </td>
+    <td>
+    Landing Location: 
+    </td>
+    <td>
+    Airline Company: 
+    </td>
+    <td>
+    Takeoff Time: 
+    </td>
+    <td>
+    Landing Time:
+    </td>
+    </tr>`
+}
+
+function returnDetailsHtml(flightPlan) {
+    let lastSegment = flightPlan.segments[Math.max(0, segments.length - 1)];
+    let dateToMoment = moment(flightPlan.initial_location.date_time);
+    flightPlan.segments.forEach(segment => {
+        dateToMoment.add(segment.timespan_seconds, 'seconds');
+    });
+    let momentToDate = dateToMoment.toDate().toString();
+    return `<tr>
+    <td>
+    Passengers: ${flightPlan.passengers}
+    </td>
+    <td>
+    Takeoff Location: ${flightPlan.initial_location.longitude}, ${flightPlan.initial_location.latitude}
+    </td>
+    <td>
+    Landing Location: ${lastSegment.longitude}, ${lastSegment.latitude}
+    </td>
+    <td>
+    Airline Company: ${flightPlan.company_name}
+    </td>
+    <td>
+    Takeoff Time: ${flightPlan.initial_location.date_time}
+    </td>
+    <td>
+    Landing Time: ${momentToDate}
+    </td>
+    </tr>`
 }
 
 function updateDetails() {
+    $.ajax({
+        url: `http://localhost:5000/api/FlightPlan/${selectedFlightId}`
+    }).done((data) => {
+        $("#flight-details").html(returnDetailsHtml(data))
+    });
+}
 
+function dragNdrop() {
+    dragBox = document.getElementById('dragbox');
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName=>{
+        dragBox.addEventListener(eventName, preventDefaults, false)
+    })
+}
+
+function preventDefaults (e) {
+    e.preventDefault();
+    e.stopPropagation();
+}
+
+function dropHandler(e){
+    let dt = e.dataTransfer;
+    let files = dt.files;
+    files.forEach(file => addFlightToMap(file))
 }
 

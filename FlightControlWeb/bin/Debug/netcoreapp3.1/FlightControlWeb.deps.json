@@ -31,6 +31,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.3",
+          "Modernizr": "2.8.3",
+          "Moment.js": "2.26.0",
           "Newtonsoft.Json": "12.0.3",
           "System.Web.Http": "4.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1110,6 +1112,8 @@
           "System.Security.Principal.Windows": "4.5.0"
         }
       },
+      "Modernizr/2.8.3": {},
+      "Moment.js/2.26.0": {},
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.2",
@@ -4216,6 +4220,20 @@
       "sha512": "sha512-+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "path": "microsoft.win32.registry/4.5.0",
       "hashPath": "microsoft.win32.registry.4.5.0.nupkg.sha512"
+    },
+    "Modernizr/2.8.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-OiV7LzwGvejI0lxQAx7HaAA+H6xC3FL6Pgv23Qo5O+5fKp5bt2zj0qz7ZmF+jtWmm9dcQkoTInO7eTFH1JtXEQ==",
+      "path": "modernizr/2.8.3",
+      "hashPath": "modernizr.2.8.3.nupkg.sha512"
+    },
+    "Moment.js/2.26.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3wN1/mgwS3CighoW/WxHspBG9lgKIbJ/BOw7I8P4UNlA6deNiXTOsyylouqQKmFmAxEytm1k/0iVm+QpN1psZA==",
+      "path": "moment.js/2.26.0",
+      "hashPath": "moment.js.2.26.0.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",

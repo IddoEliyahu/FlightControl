@@ -1,1 +1,6 @@
 .idea
+FlightControlWeb.assets.cache
+FlightControlWeb.csprojAssemblyReference.cache
+FlightControlWeb.csproj.nuget,dgspec.json
+FlightControlWeb.csproj.nuget.g.props
+projects.assets.json
