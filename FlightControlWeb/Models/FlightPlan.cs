@@ -29,7 +29,7 @@ namespace FlightControl.Models
                 SegmentsString += s.ToJson();
             }
 
-            return "{ flight_id: " + this.flight_id + ", passengers: " + this.passengers + ", company_name: "
+            return "{passengers: " + this.passengers + ", company_name: "
                    + this.company_name + ", initial_location: " + this.initial_location.ToJson()
                    + ", segments: [ " + SegmentsString + " ] }";
         }

@@ -1,6 +1,5 @@
 ﻿[
   {
-    "flight_id": "1",
     "passengers": 216,
     "company_name": "SwissAir",
     "initial_location": {
@@ -27,7 +26,6 @@
     ]
   },
   {
-    "flight_id": "2",
     "passengers": 216,
     "company_name": "SwissAir",
     "initial_location": {
@@ -54,7 +52,6 @@
     ]
   },
   {
-    "flight_id": "3",
     "passengers": 216,
     "company_name": "SwissAir",
     "initial_location": {

@@ -46,25 +46,30 @@ function toggleFlight(element) {
         // Shrink
         flightDetailsSelector.hide();
         expandedFlightsMap.set(flightId.toString(), false);
-        $("#" + selectedFlightId).toggleClass("selected");
-        $("#" + flightId).toggleClass("selected");
+        $("#" + selectedFlightId).removeClass("selected");
+        $("#" + flightId).removeClass("selected");
+        $("#" + selectedFlightId).addClass("not-selected");
+        $("#" + flightId).addClass("not-selected");
         selectedFlightId = null;
         resetDetails();
     } else {
+        $("#" + flightId).addClass("selected");
         // Expand
-        $("#" + flightId).toggleClass("selected");
+        $("#" + flightId).removeClass("not-selected");
         selectedFlightId = flightId;
         flightDetailsSelector.show();
-        expandedFlightsMap.set(flightId.toString(), true);
+        +
+            expandedFlightsMap.set(flightId.toString(), true);
         updateDetails();
     }
 }
 
 function updateFlightsListHtml(flight) {
-    return `<li id=${flight.flight_id} class="list-group-item ${selectedFlightId === flight.flight_id ? 'selected' : ''}" >
+    return `<li id=${flight.flight_id} class="list-group-item ${selectedFlightId === flight.flight_id ? 'selected' : 'not-selected'} " >
                     <div onclick='toggleFlight(this)' class='flight-id'>
                         ${flight.flight_id}
                     </div>
+                    <img src="css/x.png" class="x-button"/>
                     <div style="display: ${expandedFlightsMap.get(flight.flight_id) ? 'block' : 'none'}"
                          class="${flight.is_external ? 'external-flight' : 'internal-flight '} details
                                 ${selectedFlightId === flight.flight_id ? 'selected' : ''}">
@@ -166,17 +171,17 @@ function updateDetails() {
 
 function dragNdrop() {
     dragBox = document.getElementById('dragbox');
-    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName=>{
+    ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
         dragBox.addEventListener(eventName, preventDefaults, false)
     })
 }
 
-function preventDefaults (e) {
+function preventDefaults(e) {
     e.preventDefault();
     e.stopPropagation();
 }
 
-function dropHandler(e){
+function dropHandler(e) {
     let dt = e.dataTransfer;
     let files = dt.files;
     files.forEach(file => addFlightToMap(file))
