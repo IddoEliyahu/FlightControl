@@ -24,7 +24,6 @@ namespace FlightControlWeb
 
 
         public ExternalServersController(DataBaseContext dataBaseContext)
-
         {
             this.dataBase = dataBaseContext;
         }

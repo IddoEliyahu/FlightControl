@@ -32,17 +32,18 @@ namespace FlightControlWeb.Controllers
         [HttpGet("{id}", Name = "GetFlightPlan")]
         public async Task<ActionResult<FlightPlan>> GetFlightPlan(string id)
         {
-            var flightsAsSegments = database.FlightPlans.Include(x => x.segments);
+            // var flightsAsSegments = database.FlightPlans.Include(x => x.segments);
 
-            var requestedId = flightsAsSegments.Include(x => x.initial_location).Where(x =>
-                String.Equals(id, x.flight_id));
+            // var requestedId = flightsAsSegments.Include(x => x.initial_location).Where(x =>
+                // String.Equals(id, x.flight_id));
 
-            var flightPlan = await requestedId.FirstOrDefaultAsync();
+            // var flightPlan = await requestedId.FirstOrDefaultAsync();
 
+            FlightPlan flightPlan = database.FlightPlans.Find(id); 
             if (flightPlan != null)
 
             {
-                return flightPlan;
+                return new AcceptedResult("GetFlightPlan", flightPlan);
             }
 
             var address = await Task.Run(() => FindFlightServer(id));
@@ -90,9 +91,8 @@ namespace FlightControlWeb.Controllers
 
             await database.SaveChangesAsync();
 
-            return CreatedAtAction("GetFlightPlan", new {id = flightPlan.flight_id}, flightPlan);
+            return CreatedAtAction("PostFlightPlan", new {id = flightPlan.flight_id}, flightPlan);
         }
-
 
         private bool FlightPlanExists(string id)
 

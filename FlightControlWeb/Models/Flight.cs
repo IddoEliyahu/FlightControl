@@ -18,7 +18,6 @@ namespace FlightControl.Models
 
         public Flight(LocationWithTime locationWithTime, FlightPlan flightPlan, bool isExternal)
         {
-            
             longitude = locationWithTime.longitude;
             latitude = locationWithTime.latitude;
             date_time = locationWithTime.date_time;

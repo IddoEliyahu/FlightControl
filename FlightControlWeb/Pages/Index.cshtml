@@ -9,10 +9,13 @@
     <div class="row">
         <div class="col-8 map" id="map"></div>
         <div class="col-4 flight-list">
-            <div id='dragbox' ondrop="dropHandler(event)" ondragover="allowDrop(event)">
+            <div id='dragbox' ondrop="dropHandler(event)" ondragover="allowDrop(event)" ondragleave="hideDropStyle(event)">
                 <br>
                 <ul class="list-group" id="flight-list">
                 </ul>
+                <div id="drop-text" style="display: none" class="drop-text">
+                    Drop A Flight Plan .Json File Here 
+                </div>
             </div>
         </div>
     </div>

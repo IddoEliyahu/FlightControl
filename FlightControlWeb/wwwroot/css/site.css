@@ -173,3 +173,11 @@ body {
     color: red;
     background-color: red;
 }
+
+.droppable {
+    border: 1px dashed #aaaaaa;
+}
+
+.drop-text {
+    
+}

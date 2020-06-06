@@ -75,6 +75,7 @@ namespace FlightControl.Models
             return JsonConvert.SerializeObject(this);
         }
 
+        private static Dictionary<string, int> nameIndexDictionary = new Dictionary<string, int>();
         public static string GenerateFlightKey()
 
         {

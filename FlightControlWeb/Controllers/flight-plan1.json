@@ -1,27 +1,27 @@
 {
   "passengers": 216,
-  "flight_id": "SWI_000",
+  "flight_id": "SWI_004",
   "company_name": "SwissAir",
   "initial_location": {
     "longitude": 33.244,
     "latitude": 31.12,
-    "date_time": "2020-6-5T20:00:21Z"
+    "date_time": "2020-6-6T21:40:00Z"
   },
   "segments": [
     {
-      "longitude": 33.234,
-      "latitude": 31.18,
-      "timespan_seconds": 650
+      "longitude": 33,
+      "latitude": 0,
+      "timespan_seconds": 1800
     },
     {
-      "longitude": 33.334,
-      "latitude": 31.28,
-      "timespan_seconds": 250
+      "longitude": 0,
+      "latitude": 0,
+      "timespan_seconds": 1800
     },
     {
-      "longitude": 33.434,
-      "latitude": 31.38,
-      "timespan_seconds": 8500000
+      "longitude": 0,
+      "latitude": 31,
+      "timespan_seconds": 1800
     }
   ]
 }
