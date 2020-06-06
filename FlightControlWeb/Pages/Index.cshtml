@@ -9,7 +9,8 @@
     <div class="row">
         <div class="col-8 map" id="map"></div>
         <div class="col-4 flight-list">
-            <div id='dragbox'>
+            <div id='dragbox' ondrop="dropHandler(event)" ondragover="allowDrop(event)">
+                <br>
                 <ul class="list-group" id="flight-list">
                 </ul>
             </div>
@@ -17,14 +18,14 @@
     </div>
     <div class="row flight-details">
         <table class="col-8 table-bordered">
-            <thead>
-            <th>
-                <span>
-                    Flight Details
-                </span>
-            </th>
-            </thead>
-            <tbody class="flight-details-table">
+            @* <thead> *@
+            @* <th> *@
+            @*     <span> *@
+            @*         Flight Details *@
+            @*     </span> *@
+            @* </th> *@
+            @* </thead> *@
+            <tbody class="flight-details-table" id="flight-details">
             <tr>
                 <td>
                     Passengers: 216
@@ -50,13 +51,13 @@
     </div>
 </div>
 
-<style>
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-</style>
+@* <style> *@
+@*     /* Optional: Makes the sample page fill the window. */ *@
+@*     html, body { *@
+@*         height: 100%; *@
+@*         margin: 0; *@
+@*         padding: 0; *@
+@*     } *@
+@* </style> *@
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBztoECaWRdWEGiS5akC4r3iasQexXjCGY&callback=initMap"></script>

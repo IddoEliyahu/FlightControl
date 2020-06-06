@@ -5,130 +5,69 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Text.Json;
+using FlightControl;
 using Newtonsoft.Json;
 using FlightControl.Models;
+using FlightControlWeb.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Memory;
 
-namespace FlightControl
+namespace FlightControlWeb
 
 {
-
     [ApiController]
-
     [Route("api/[controller]")]
-
     public class ExternalServersController : ControllerBase
 
     {
-
-        private IMemoryCache cache;
-
-        private ServersManager serverManager;
+        private readonly DataBaseContext dataBase;
 
 
-
-        public ExternalServersController(IMemoryCache cache)
+        public ExternalServersController(DataBaseContext dataBaseContext)
 
         {
-
-            this.cache = cache;
-
-            serverManager = new ServersManager(this.cache);
-
+            this.dataBase = dataBaseContext;
         }
-
 
 
         // GET: api/Servers
 
         [HttpGet]
-
-        public ActionResult<IEnumerable<Server>> GetAllExternalServers()
-
+        public async Task<ActionResult<IEnumerable<Server>>> GetServer()
         {
-
-            return CreatedAtAction(actionName: "GetAllExternalServers", this.serverManager.getAllExternalServers());
-
+            return await dataBase.Servers.ToListAsync();
         }
-
 
 
         // POST: api/Servers
 
         [HttpPost]
-
-        public ActionResult AddNewServer(Server newServer)
-
-        {
-
-            this.serverManager.addNewServer(newServer);
-
-            return CreatedAtAction(actionName: "AddNewServer", newServer);
-
-        }
-
-
-
-        // GET: api/Servers/5
-
-        [HttpGet("{serverID}", Name = "GetServer")]
-
-
-
-        public ActionResult<Server> GetServer(string serverID)
+        public async Task<ActionResult<Server>> PostServer(Server newServer)
 
         {
+            if (newServer.ServerURL.Last() != '/')
+            {
+                newServer.ServerURL += "/";
+            }
 
+            dataBase.Servers.Add(newServer);
             try
-
             {
-
-                Server s = this.serverManager.getServer(serverID);
-
-                return CreatedAtAction(actionName: "GetServer", s);
-
+                await dataBase.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                if (dataBase.Servers.Any(e => e.ServerID == newServer.ServerID))
+                {
+                    return Conflict();
+                }
+                else
+                {
+                    throw;
+                }
             }
 
-            catch
-
-            {
-
-                return BadRequest();
-
-            }
-
+            return CreatedAtAction("GetServer", new {id = newServer.ServerID}, newServer);
         }
-
-
-
-        // DELETE: api/ApiWithActions/5
-
-        [HttpDelete("{serverID}")]
-
-        public ActionResult DeleteServer(string serverID)
-
-        {
-
-            try
-
-            {
-
-                this.serverManager.deleteServer(serverID);
-
-                return CreatedAtAction(actionName: "DeleteServer", "Server with ID " + serverID + " deleted");
-
-            }
-
-            catch
-
-            {
-
-                return BadRequest();
-
-            }
-
-        }
-
     }
-
 }

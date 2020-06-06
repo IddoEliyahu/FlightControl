@@ -1,6 +1,34 @@
 ﻿[
   {
     "passengers": 216,
+    "flight_id": "SWI_000",
+    "company_name": "SwissAir",
+    "initial_location": {
+      "longitude": 33.244,
+      "latitude": 31.12,
+      "date_time": "2020-6-5T20:00:21Z"
+    },
+    "segments": [
+      {
+        "longitude": 33.234,
+        "latitude": 31.18,
+        "timespan_seconds": 650
+      },
+      {
+        "longitude": 33.334,
+        "latitude": 31.28,
+        "timespan_seconds": 250
+      },
+      {
+        "longitude": 33.434,
+        "latitude": 31.38,
+        "timespan_seconds": 8500000
+      }
+    ]
+  },
+  {
+    "passengers": 216,
+    "flight_id": "SWI_001",
     "company_name": "SwissAir",
     "initial_location": {
       "longitude": 33.244,
@@ -27,32 +55,7 @@
   },
   {
     "passengers": 216,
-    "company_name": "SwissAir",
-    "initial_location": {
-      "longitude": 33.244,
-      "latitude": 31.12,
-      "date_time": "2020-12-26T23:56:21Z"
-    },
-    "segments": [
-      {
-        "longitude": 33.234,
-        "latitude": 31.18,
-        "timespan_seconds": 650
-      },
-      {
-        "longitude": 33.334,
-        "latitude": 31.28,
-        "timespan_seconds": 250
-      },
-      {
-        "longitude": 33.434,
-        "latitude": 31.38,
-        "timespan_seconds": 850
-      }
-    ]
-  },
-  {
-    "passengers": 216,
+    "flight_id": "SWI_002",
     "company_name": "SwissAir",
     "initial_location": {
       "longitude": 33.244,

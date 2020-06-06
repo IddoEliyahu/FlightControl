@@ -62,7 +62,7 @@ namespace FlightControl.Models
 
             else
 
-                throw new Exception("Server does not exist");
+                throw new Exception("Servers does not exist");
         }
 
 
@@ -82,7 +82,7 @@ namespace FlightControl.Models
 
             if (getServer == null)
 
-                throw new Exception("Server does not exist");
+                throw new Exception("Servers does not exist");
 
             else
 

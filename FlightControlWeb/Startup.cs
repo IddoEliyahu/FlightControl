@@ -2,12 +2,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Web.Http.Routing.Constraints;
 using FlightControl.Models;
+using FlightControlWeb.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+
 using Microsoft.EntityFrameworkCore;
 
 namespace FlightControl
@@ -24,6 +27,10 @@ namespace FlightControl
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<DataBaseContext>(opt =>
+
+                opt.UseInMemoryDatabase("FlightDatabase"));
+
             services.AddCors();
             services.AddControllers();
             services.AddRazorPages();
@@ -43,8 +50,6 @@ namespace FlightControl
 
             app.UseCors(options => options.WithOrigins("http://localhost:5000").AllowAnyMethod());
             app.UseStaticFiles();
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 

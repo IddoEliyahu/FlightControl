@@ -17,4 +17,14 @@ namespace FlightControl
 
         public string ServerURL { get; set; }
     }
+    public class ServerById
+    {
+
+        [Key]
+
+        public string FlightID { get; set; }
+
+        public string ServerURL { get; set; }
+    }
+
 }

@@ -146,3 +146,5 @@ C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\obj\Debug\netcoreapp3.
 C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\obj\Debug\netcoreapp3.1\FlightControlWeb.dll
 C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\obj\Debug\netcoreapp3.1\FlightControlWeb.pdb
 C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\obj\Debug\netcoreapp3.1\FlightControlWeb.genruntimeconfig.cache
+C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\bin\Debug\netcoreapp3.1\Controllers\flight-plan1.json
+C:\Users\Iddo\source\repos\FlightControl\FlightControlWeb\bin\Debug\netcoreapp3.1\SWI_002.json
